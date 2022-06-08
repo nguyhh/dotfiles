@@ -7,19 +7,19 @@ colors
 
 # Create an unversioned script for scripts that are specific to this local environment
 # and that you don't want to follow you across environments.
-touch ~/extra.zsh
+# touch ~/extra.zsh
 
-ZSH_HOST_OS=$(uname | awk '{print tolower($0)}')
+# ZSH_HOST_OS=$(uname | awk '{print tolower($0)}')
 
-case $ZSH_HOST_OS in
-  darwin*)
+# case $ZSH_HOST_OS in
+#   darwin*)
 
-  BREW_EXECUTABLE=/opt/homebrew/bin/brew
+#   BREW_EXECUTABLE=/opt/homebrew/bin/brew
 
-  $BREW_EXECUTABLE shellenv > $HOME/.dotfile_brew_setup
-  $BREW_EXECUTABLE install coreutils
-;;
-esac
+#   $BREW_EXECUTABLE shellenv > $HOME/.dotfile_brew_setup
+#   $BREW_EXECUTABLE install coreutils
+# ;;
+# esac
 
 # Install the antigen plugin/theme manager if it's not already installed.
 if [[ ! -d $HOME/antigen ]]; then
@@ -30,6 +30,7 @@ if [[ ! -d $HOME/antigen ]]; then
 fi
 
 if [ $SPIN ]; then
+  echo "Running Scripts for Spin"
   # Install Ripgrep for better code searching: `rg <string>` to search. Obeys .gitignore
   sudo apt-get install -y ripgrep
 
