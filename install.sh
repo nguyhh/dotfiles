@@ -33,6 +33,8 @@ if [ $SPIN ]; then
   echo "Running Scripts for Spin"
   # Install Ripgrep for better code searching: `rg <string>` to search. Obeys .gitignore
   sudo apt-get install -y ripgrep
+  git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+  ~/.fzf/install --key-bindings --completion --update-rc
 
   # Set system generated .gitconfig to .gitconfig.local. We'll pull it in later as part
   # of our custom gitconfig. The generated gitconfig already has the right user and email,
