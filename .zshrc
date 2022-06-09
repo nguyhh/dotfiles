@@ -55,3 +55,4 @@ source $DF_USER/custom.zsh
 
 # Load changes specific to this local environment.
 source ~/extra.zsh
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
