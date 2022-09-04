@@ -9,5 +9,4 @@ plugins=(git
 	fzf
     zsh-syntax-highlighting
 	zsh-autosuggestions)
-
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+[ -z "$ZSH_NAME" ] && [ -f ~/.fzf.bash ] && source ~/.fzf.bash
